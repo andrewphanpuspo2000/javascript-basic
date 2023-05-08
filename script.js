@@ -140,3 +140,205 @@ do {
   i++;
   console.log(i);
 } while (i < 10);
+
+// string
+const str = "Name is good  ";
+console.log(typeof str);
+
+// length
+const str1 = str.length;
+console.log(str1);
+
+// uppercase
+const val = str.toUpperCase();
+console.log(val);
+
+const val1 = str.indexOf("d");
+console.log(val1);
+
+//replace
+const val2 = str.replaceAll("a", "good");
+console.log(val2);
+
+// substring
+const val3 = str.substring(1, 3);
+console.log(val3);
+
+//slice
+const val4 = str.slice(2, 5);
+console.log(val4);
+
+// includes
+const val5 = str.includes("good");
+console.log(val5);
+
+// split
+const val6 = str.split(" ");
+console.log(val6);
+
+// search
+// will return the index of first letter
+const val7 = str.search("Name");
+console.log(val7);
+
+// trim
+const val8 = str.trim();
+console.log(val8.length);
+console.log(str.length);
+
+// concatination
+const concat = (name) => {
+  return `My name is ${name}`;
+};
+
+var username = concat("Andrew");
+console.log(username);
+var name1 = concat("APP");
+console.log(name1);
+
+// Array
+const fruits = ["Apple", "Banana", "Orange", "mango", 23, 313];
+console.log(fruits);
+
+// add item to the end of list
+fruits.push("Water melon");
+console.log(fruits);
+// add item to the beginning of list
+
+fruits.unshift("Water melon");
+console.log(fruits);
+
+// remove item
+
+const remove = fruits.pop();
+console.log(remove);
+
+const remove1 = fruits.shift();
+console.log(remove1);
+console.log(fruits);
+
+// const data = fruits.splice(2, 3);
+
+// console.log(data);
+//only work for number
+const data2 = fruits.sort((a, b) => b - a);
+
+console.log(data2);
+
+//loop
+const fruit2 = ["sadm.", "nsda"];
+
+fruit2.forEach((item, i) => {
+  console.log(i, item);
+});
+
+const f = fruit2.map((item, i) => {
+  return "item-" + item;
+});
+
+console.log(f);
+
+const fr = fruit2.filter((item, i) => {
+  return item.includes("n");
+});
+
+console.log(fr);
+
+// challenge
+// 1
+console.log("Challenge 1");
+let arr = [];
+
+let number = 0;
+
+for (let i = number; i < 50; i++) {
+  let num = Math.round(Math.random() * 100);
+  arr.push(num);
+}
+console.log(arr);
+
+// Challenge2
+const sort = arr.sort((a, b) => b - a);
+console.log(sort);
+
+// challenge 3
+const total = arr.reduce((subtotal, num) => subtotal + num);
+
+console.log(total);
+
+// challenge 4
+let odd = [];
+let even = [];
+arr.forEach((itm, i) => {
+  if (itm % 2 == 0) {
+    even.push(itm);
+  } else {
+    odd.push(itm);
+  }
+});
+
+console.log(odd, even);
+
+// challenge 5
+const temparr = [];
+const nonduplicate = arr.map((itm) => {
+  if (temparr.includes(itm)) {
+    return false;
+  } else {
+    temparr.push(itm);
+  }
+});
+
+console.log(temparr);
+
+// object
+const person = {
+  name: "sam",
+  age: 22,
+};
+
+const p2 = { ...person }; //spread
+console.log(person.name);
+person.city = "Sydney";
+
+console.log(person);
+// delete person.age;
+console.log(person, p2);
+
+const { name, ...rest } = person; //destructuring
+
+console.log(name);
+console.log(rest);
+
+const paraph = (obj) => {
+  return `
+ My name is ${name} and add is 
+ `;
+};
+
+let tt = paraph({ name });
+
+console.log(tt);
+
+// date
+const date = Date();
+const date2 = new Date("2020-11-02");
+const date1 = Date.now();
+
+var dateminute = date2.getMinutes();
+console.log(dateminute);
+
+let product = {
+  nameProduct: "Lays",
+  exp: new Date("2025-08-01"),
+};
+const products = (name) => {
+  const nowdate = new Date("2023-03-09");
+  let getYear = exp.getFullYear() - nowdate.getFullYear();
+  console.log(typeof nowdate.getFullYear());
+  return `${nameProduct} is not exprired. ${getYear} years left `;
+};
+
+const { nameProduct, exp } = product;
+
+console.log(products(nameProduct, exp));
