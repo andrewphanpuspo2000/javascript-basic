@@ -326,19 +326,58 @@ const date2 = new Date("2020-11-02");
 const date1 = Date.now();
 
 var dateminute = date2.getMinutes();
-console.log(dateminute);
+console.log(date1);
 
 let product = {
   nameProduct: "Lays",
-  exp: new Date("2025-08-01"),
+  exp: "2025-08-01",
 };
 const products = (name) => {
   const nowdate = new Date("2023-03-09");
-  let getYear = exp.getFullYear() - nowdate.getFullYear();
-  console.log(typeof nowdate.getFullYear());
-  return `${nameProduct} is not exprired. ${getYear} years left `;
+  // let getYear = exp.getFullYear() - nowdate.getFullYear();
+  // let getMinutes= exp.getMonth()- nowdate.getMonth();
+  // console.log(typeof nowdate.getFullYear());
+  //  if(){
+
+  // }
+  // return `${nameProduct} is not exprired. ${getYear} years left until expired`;
 };
 
 const { nameProduct, exp } = product;
 
 console.log(products(nameProduct, exp));
+
+const newapp = {
+  name: "flooter",
+  founder: "Andrew",
+  value: 2000000,
+  HQ: "Shanghai",
+};
+
+const { ...restapp } = newapp;
+
+const trackfunct = ({ name, founder, value, HQ = "US" }) => {
+  return `${name} is a tech company that established by ${founder} and 
+  now has been valued more than ${value}. It is located in ${HQ}`;
+};
+
+const person1 = trackfunct(restapp);
+
+console.log(person1);
+
+let sentence = "new manager";
+
+let num = 0;
+const decsentence = (sen) => {
+  let sent = sen;
+  do {
+    let tempstr = sent.substr(num, sent.length);
+    console.log(tempstr);
+    num++;
+  } while (num < sent.length);
+};
+
+const example = decsentence(sentence);
+
+const slice = sentence.slice(0, 3);
+console.log(sentence.length);
