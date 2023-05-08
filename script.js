@@ -381,3 +381,19 @@ const example = decsentence(sentence);
 
 const slice = sentence.slice(0, 3);
 console.log(sentence.length);
+
+const arr4 = [2, 3, 14, 10, 12, 11];
+
+function filtering(num) {
+  if (num > 6 && num <= 11) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const filterbetween = arr4.filter((itm) => {
+  if (itm > 2) return true;
+  else return false;
+});
+
+console.log(filterbetween);
