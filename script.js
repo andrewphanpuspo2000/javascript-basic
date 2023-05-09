@@ -397,3 +397,31 @@ const filterbetween = arr4.filter((itm) => {
 });
 
 console.log(filterbetween);
+
+const printNew = () => {
+  let date = new Date();
+  console.log(date.toLocaleTimeString());
+};
+
+// const intervalTest = setInterval(printNew, 1000);
+
+const arrobj = [
+  {
+    name: "Eric",
+    Age: 23,
+  },
+  {
+    name: "Todd",
+    Age: 25,
+  },
+];
+
+let checkfunc = (age) => {
+  arrobj.forEach((item) => {
+    if (item.Age < age) console.log(`My name is ${item.name}`);
+  });
+};
+
+const trying = checkfunc(24);
+
+// console.log(trying);
