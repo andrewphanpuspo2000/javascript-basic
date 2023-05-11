@@ -425,3 +425,20 @@ let checkfunc = (age) => {
 const trying = checkfunc(24);
 
 // console.log(trying);
+
+const divider = {
+  array: [20, 21, 34, 33, 45, 60, 40],
+};
+
+const { array } = divider;
+
+const checkevennumber = (check) => {
+  check.forEach((it) => {
+    let cEven = it % 2;
+    if (cEven === 0) {
+      console.log(it);
+    }
+  });
+};
+
+const evenFunction = checkevennumber(array);
